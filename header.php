@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Agencia</title>
-    <link rel="stylesheet" href="style.e2e1a33c.css">
-    <script src="main.ef23f591.js" defer=""></script>
+    <?php wp_head(); ?>
 </head>
 
 <body class="home">
