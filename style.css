@@ -28,11 +28,26 @@ Requires PHP: 7.2
     margin-bottom: 1.05em
 }
 
-.comments .edit-link, .comments .reply {
+.comment .edit-link, .comment .reply {
     font-weight: 300;
     font-size: 0.8em
 }
 
-.comments .edit-link::before, .comments .reply::before {
+.comment .edit-link::before, .comment .reply::before {
     content: ' - '
+}
+
+.form-2column .comment-notes,
+.form-2column .comment-form-cookies-consent,
+.form-2column .form-submit {
+    grid-column: 1/-1
+}
+
+.comment .comment {
+    margin-top: 1em;
+    margin-left: 75px
+}
+
+.current_page_parent {
+    color: #FE6748
 }

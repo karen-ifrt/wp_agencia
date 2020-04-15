@@ -1,6 +1,5 @@
-<<?= $tag ?> id="comment-<?php comment_ID(); ?>" <?php comment_class('comment' . ($this->has_children ? 'parent' : ''), $comment); ?>">
+<<?= $tag ?> id="comment-<?php comment_ID(); ?>" <?php comment_class('comment ' . ($this->has_children ? 'parent' : ''), $comment); ?>>
     <?= get_avatar($comment, 120, '', '', ['class' => 'comment__avatar']); ?>
-
     <div class="comment__body">
         <footer>
             <div class="comment__username"><?= get_comment_author_link($comment) ?></div>
@@ -30,7 +29,6 @@
                 )
             );
             ?>
-
         </footer>
         <div class="comment__content">
             <?php comment_text(); ?>
