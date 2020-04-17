@@ -50,18 +50,19 @@
         <div class="property__body">
             <div class="property__location"><?php agence_city() ?></div>
             <h3 class="property__title"><?php the_title() ?> - <?php the_field('surface') ?>m²</h3>
-            <div class="property__price"><?php ?></div>
+            <div class="property__price"><?php agence_price() ?></div>
         </div>
     </a>
 <?php $i++; endwhile; ?>
 
-
-
-
 </div>
 
+<?php if(get_query_var('paged', 1) > 1):  ?>
+
+<?= agencia_paginate(); ?>
+<?php elseif($nextPostLink = get_next_posts_link(__('More properties +', 'agencia'))): ?>
 <div class="pagination">
-    <a href="#" class="btn">Voir plus de biens +</a>
+    <?= $nextPostLink;  ?>
 </div>
-
+<?php endif ?>
 <?php get_footer(); ?>
